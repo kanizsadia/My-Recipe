@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/app/routes/app_pages.dart';
 
 import 'package:get/get.dart';
 
@@ -13,9 +14,9 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+        child: ElevatedButton(
+          onPressed: () => Get.toNamed(Routes.RECIPE),
+          child: const Text('go to recipe'),
         ),
       ),
     );
