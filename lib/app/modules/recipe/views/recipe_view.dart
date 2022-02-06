@@ -12,10 +12,12 @@ class RecipeView extends GetView<RecipeController> {
         title: Text('RecipeView'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'RecipeView is working',
-          style: TextStyle(fontSize: 20),
+      body: controller.obx(
+        (data) => Center(
+          child: Text(
+            "${data}",
+            style: TextStyle(fontSize: 12),
+          ),
         ),
       ),
     );
