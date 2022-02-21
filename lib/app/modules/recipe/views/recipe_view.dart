@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/app/modules/recipe/views/recipe_card_view.dart';
 
 import 'package:get/get.dart';
 
@@ -12,14 +13,15 @@ class RecipeView extends GetView<RecipeController> {
         title: Text('RecipeView'),
         centerTitle: true,
       ),
-      body: controller.obx(
-        (data) => Center(
-          child: Text(
-            "${data}",
-            style: TextStyle(fontSize: 12),
-          ),
-        ),
-      ),
+      body: RecipeCardView(),
+      // controller.obx(
+      //   (data) => Center(
+      //     child: Text(
+      //       "${data}",
+      //       style: TextStyle(fontSize: 12),
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
